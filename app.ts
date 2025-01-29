@@ -9,7 +9,8 @@ import { DataSource } from 'typeorm';
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import swaggerOptions from './swagger';
-import chat from './src/routes/chat'
+import chat from './src/routes/chat';
+import roadmap from './src/routes/roadmap';
 import cors from "cors";
 
 
@@ -29,6 +30,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Routes setup
 app.use('/api/auth', auth)
 app.use('/api/chat', chat)
+app.use('/api/roadmap', roadmap)
 
 
 // Start server
